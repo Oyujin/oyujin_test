@@ -1,9 +1,24 @@
 img{
-    height:20px;
-    width: 20px;
+    height:150px;
+    float: left;
+    margin: 20px;
+    width:105px;
+    
 }
 .contents{
     width: fit-content;
-    height: 100px;
+    height: auto;
+    background-color: rgb(118, 216, 244);
     display: flex;
+    margin: 10px;
+    padding: 10px;
 }
+
+.pars{
+    float: left;
+    display:grid;
+}
+.gridd{
+    text-align: left;
+}
+

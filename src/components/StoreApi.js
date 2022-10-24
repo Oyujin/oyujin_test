@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import "./StoreApi.css"
 
 const StoreApi = () => {
     const [searchValue, setSearchValue] = useState("")
@@ -47,17 +48,19 @@ const StoreApi = () => {
             <button onClick={handleSearchButton}>Search</button>
             <div>
                 {filteredProds.map((prod) => {
-                    return <div className='contents' border='10px' >
-                        <img src={prod[5]} alt='im' height={150} float={'left'}></img>
-                        <p>ID: {prod[0]}</p>
-                        <p>TITLE: {prod[1]}</p>
-                        <p>PRICE: {prod[2]}</p>
-                        <p>CATEGORY: {prod[3]}</p>
-                        <p>DESCRIPTION: {prod[4]}</p>
-                        <p>RATE: {prod[6]}</p>
-                        <p>COUNT: {prod[7]}</p>
-                    </div>
+                    return <div className='contents' >
+                        <img src={prod[5]} alt='im'></img>
+                        <div className='pars'>
+                            <div className='gridd'>ID: {prod[0]}</div>
+                            <div className='gridd'> TITLE: {prod[1]}</div>
+                            <div className='gridd'> PRICE: {prod[2]}</div>
+                            <div className='gridd'> CATEGORY: {prod[3]}</div>
+                            <div className='gridd'> DESCRIPTION: {prod[4]}</div>
+                            <div className='gridd'> RATE: {prod[6]}</div>
+                            <div className='gridd'> COUNT: {prod[7]}</div>
+                        </div>
 
+                    </div>
                 })}
             </div>
             {/* <h1>You searched for = {searchValue}</h1> */}
